@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dedupe-cli"
+version = "0.1.0"
+description = "Find and (optionally) remove byte-for-byte duplicate files in a directory tree."
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.8"
+authors = [
+    {name = "dedupe-cli contributors"}
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Environment :: Console",
+    "Topic :: Utilities",
+]
+
+[project.scripts]
+dedupe-cli = "dedupe_cli.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["dedupe_cli*"]
